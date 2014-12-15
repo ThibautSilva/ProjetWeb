@@ -1,9 +1,69 @@
-	#disconnection_zone{
-	background-color:#D6D6D6;
-	height:150px;
-	width:260px;
-	float:left-side;
+		#disconnection_zone{
+		background-color:#f3e7f5;
+		height:150px;
+		width:260px;
+		float:left-side;
+		}
+	#user {
+		height:90px;
+		width:90px;
+		float:center;
+		margin-top:5px;
+		margin-left:70;
 	}
+	body{
+	font-family: Arial;
+	}
+	
+	h2{
+	font-size: 40px;
+	color: grey;
+	font-style: bold;
+	text-align: center;
+	}
+	
+	#btn_d {
+	  background: #830fa3;
+	  -webkit-border-radius: 28;
+	  -moz-border-radius: 28;
+	  border-radius: 28px;
+	  color: #ffffff;
+	  font-size: 16px;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+	  border: solid #ffffff 2px;
+	  margin-left:50;
+	  margin-top:5px;
+	}
+
+	#btn_d:hover {
+	  background: #ffffff;
+	  color:#43134a;
+	  text-decoration: none;
+	  border: solid #43134a 2px;
+	}
+	
+	
+	
+	
+	#btn_p {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  background: url(Images/ajout.png) no-repeat 0px 0px #444;
+  padding: 15px 35px 10px 45px;
+  text-decoration: none;
+  border: 0 none;
+  margin-left:50;
+	margin-top:5px;
+}
+
+#btn_p:hover {
+  background: #2b2d2e;
+  text-decoration: none;
+}
 	#search{
 	padding: 5px 5px 5px 5px;
 	size="40";
@@ -18,7 +78,6 @@
 		-webkit-border-radius: 20px;
 		-moz-border-radius: 20px;
 		border-radius: 20px;
-		float: center;
 		}
 		
 	#search input[type="text"]:focus {
@@ -46,6 +105,7 @@
 		width:1050px;
 		height:480px;
 		padding:10px;
+		color: grey;
 		float: right;		
 	}
 		
@@ -57,3 +117,25 @@
 		text-align:center;
 		padding:5px; 
 	}
+	
+	#search{
+	padding: 5px 5px 5px 5px;
+	size="100";
+	}
+	
+	#form input[type="text"] {
+		background-color:#444;
+		border: 0 none;
+		font: bold 12px Arial,Helvetica,Sans-serif;
+		color: #777;
+		width: 250px;
+		padding: 6px 15px 6px 35px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		}
+		
+	#search input[type="text"]:focus {
+    background: url(Images/search-dark.png) no-repeat 10px 6px #fcfcfc;
+    color: #6a6f75;
+    }

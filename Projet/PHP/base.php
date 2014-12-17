@@ -11,7 +11,7 @@
   // Password (not used here)
   $dbpass = "password";
  
-  $connection = mysqli_connect($dbhost, $dbuser) or die("Erreur MySQL : ".mysqli_error());
-  mysqli_select_db($connection, $dbname) or die("Erreur MySQL : ".mysqli_error());
+  $connection = mysql_connect($dbhost, $dbuser) or die("Erreur MySQL : ".mysql_error());
+  mysql_select_db($dbname) or die("Erreur MySQL : ".mysql_error());
  
 ?>

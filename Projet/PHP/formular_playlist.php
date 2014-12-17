@@ -3,11 +3,11 @@
   <head>
     <title>Formulaire</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="Projet.css"/>
+	<link rel="stylesheet" href="../CSS/Projet.css"/>
   </head>
 	
   <body>
-
+	<?php include "../PHP/header.php"?>
 	  <div id=principal_zone>
 	  
 	    <h2>Nouvelle Playlist</h2>
@@ -25,5 +25,8 @@
 	
 		  </form>
 		</div>
+			<?php include "../PHP/connexion_zone.php"?>
+	<?php include "../PHP/nav.php"?>
+	<?php include "../PHP/playing_zone.php"?>
   </body>
 </html>

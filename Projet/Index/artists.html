@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Site de Musique</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/Projet.css">
+</head>
+
+<body onload="loadJSONDoc()">
+	<div id=principal_zone >
+		<table id="tracksTable">
+      <tr>
+	    <th id="imageCell">Image</th>
+		<th onclick="loadJSONDoc('name')">Nom</th>
+		<th onclick="loadJSONDoc('info')">Info</th>
+	  </tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="../JavaScript/artists.js"></script>
+	
+	</body>
+</html>

@@ -1,7 +1,7 @@
-		#disconnection_zone{
+		#connexion_zone{
 		background-color:#f3e7f5;
 		height:150px;
-		width:260px;
+		width:280px;
 		float:left-side;
 		}
 	#user {
@@ -14,6 +14,7 @@
 	body{
 	font-family: Arial;
 	}
+	
 	
 	h2{
 	font-size: 40px;
@@ -73,7 +74,7 @@
 		border: 0 none;
 		font: bold 12px Arial,Helvetica,Sans-serif;
 		color: #777;
-		width: 250px;
+		width: 500px;
 		padding: 6px 15px 6px 35px;
 		-webkit-border-radius: 20px;
 		-moz-border-radius: 20px;
@@ -89,26 +90,104 @@
 	background-color:#333333;
 	padding:2px;
 	height:40px;
-	width:260px;
 	float:left-side;
 	} 
 	
 	#nav{
 	background-color:white;
 	height:300px;
-	width:260px;
 	float:left-side;
+	overflow: auto;
 	}
+	
+td img{
+  /* 
+   * Setting the style of images as 'block' rather than 'inline'
+   * enables to remove the space under them in the table cells.
+   */
+  display: block;
+}
+.imageCell{
+  width: 65px;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {height:1em;width:1.2em;background:#6a6f75;} 
+::-webkit-scrollbar-thumb {background:#333333;-webkit-box-shadow: 0 0 5px #888; } 
+::-webkit-scrollbar-thumb:hover {background:43134ae;}
 
 	#principal_zone{
+	overflow: auto;
+
 		background-color:#1A1A1A;
 		width:1050px;
-		height:480px;
+		height:430px;
 		padding:10px;
-		color: grey;
-		float: right;		
+		color :white;
+		float: right;	
 	}
-		
+	#tracksTable
+	{
+		color:grey;
+		border-collapse:collapse
+	}
+#menu {
+  padding:0;
+  margin:0;
+  color:grey;
+  list-style:none;
+  text-align: center;
+  width: 230px;
+}
+#menu ul {
+  padding:6px;
+  margin:0;
+  size:20px;
+  list-style:none;
+  text-align: center;
+}
+#menu li {
+   background-color:#f3e7f5; 
+   color:grey;
+}
+#menu li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   size:8px;
+   background: grey;
+   box-shadow: none;
+   border:none;
+   margin:0; 
+}
+#menu a {
+  display:block;
+  text-decoration: none;
+  padding: 4px;
+  font-size:1.2em
+}
+#menu ul li a, #menu li:hover li a {
+  font-size:1em;
+  color: #333333;
+}
+#menu li:hover {
+   background: #f3e7f5;
+   color:grey;
+}
+#menu li li:hover {
+   background: #999;
+}
+#menu ul li:last-child {
+   border:none;
+}
+#menu li:hover li {
+  max-height: 15em;
+}
+
+	td {
+ border:1px solid #333333;
+ width:20%;
+ }
 	#playing_zone{
 		background-color:#333333;
 		color:white;

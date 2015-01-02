@@ -22,7 +22,7 @@
 				<li name=playlist_name> <a href='#'>". $row['playlist_name'] . " </a>
 				<ul>
 					<li> <a href='action.php?act=lire'>Lire</a> </li>
-					<li> <a href='action.php?act=rename&name=".$row['playlist_name'] . "'>Renommer</a> </li>
+					<li> <a href='rename.php?name=".$row['playlist_name'] . "'>Renommer</a> </li>
 					<li> <a href='action.php?act=delete&name=".$row['playlist_name'] . "'>Effacer</a></li>
 				</ul>
 			</ul>";

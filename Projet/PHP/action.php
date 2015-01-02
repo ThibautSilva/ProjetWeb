@@ -12,6 +12,7 @@
 	<?php
 	
 		require('base.php');
+		
 			$valid = true;
 			$message = "";
 			$user_id=1;
@@ -20,11 +21,39 @@
 
 		if ($act=="read")
 		{
-			include "readplaylist.php"
+			echo "lire";
 		}
 		if ($act=="rename")
-		{
-			include "rename.php";
+		{			
+			if (!isset($_POST['playlist_new_name']) || strlen($_POST['playlist_new_name'])== 0 )
+			{
+				$valid = false;
+				$message .= '<p class="error">Aucun nom de playlist, entrer un nom de playlist</p>';
+			}
+			else
+			{
+				$newname=$_POST['playlist_new_name'];
+			}
+			if ($valid)
+			{
+				$available = checkPlaylistName($newname);
+				if (!$available)
+				{
+				  $valid = false;
+				  $message .= '<p class="error">le nom de playlists '.$newname.' est déjà pris.</p>';
+				}
+			}
+			if ($valid)
+			{
+				echo "<p>Le nom a été validé par le serveur.<p/>";
+				$playlistsOK = renamePlaylists($user_id,$name,$newname);
+				if ($playlistsOK)
+				{
+					echo '<p>La Playlist '.$name.' a été renomée '.$newname.' avec succes </p>';
+				}
+			}
+			
+			
 		}
 		if ($act=="delete")
 		{
@@ -38,11 +67,10 @@
 					$message .= '<p class="error">Un problème est intervenu lors de la Suppression de la PlayList  '.$name.'</p>';
 				}
 		}
-		
 		else
 		{
 			echo $message;	
-			echo '<p><a href="../Index/Indexs.php">Retour vers la page principale.</a></p>';
+			echo '<p><a href="Indexs.php">Retour vers la page principale.</a></p>';
 		}
   ?>
   
@@ -57,13 +85,30 @@
    
   <?php
  
- require('base.php');
+require('base.php');
    /**
-   * Put the playlits and its owner in the database.
+   * Put the delete the plalist by using the playlist nam from the database.
    */  
  function deletePlaylist($user_id,$playlist_name)
  {
-	$OK = mysql_query("DELETE FROM playlist WHERE user_id='".$user_id."' && playlist_name='".$name."'");
+	$OK = mysql_query("DELETE FROM playlists WHERE user_id='".$user_id."' AND playlist_name='".$playlist_name."'");
+	return $OK;
+ }
+    /**
+   * check if the playlist namme is not taken
+   */  
+   function checkPlaylistName($playlist_name){
+    $result = mysql_query("SELECT COUNT(*) FROM playlists WHERE playlist_name = '".$playlist_name."'");
+	$row = mysql_fetch_row($result);
+	return !$row[0];
+  }
+  
+      /**
+   * Rename the playlist
+   */ 
+  function renamePlaylists($user_id,$playlist_name,$newname)
+ {
+	$OK = mysql_query("UPDATE playlists SET playlist_name = '".$newname."' WHERE playlist_name = '".$playlist_name."' AND user_id='".$user_id."'");
 	return $OK;
  }
   ?>

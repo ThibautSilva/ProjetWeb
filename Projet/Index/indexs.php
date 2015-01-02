@@ -11,7 +11,5 @@
 	<?php include "../PHP/connexion_zone.php"?>
 	<?php include "../PHP/nav.php"?>
 	<?php include "../PHP/playing_zone.php"?>
-
-	
 </body>
 </html>

@@ -7,7 +7,6 @@
 </head>
 	</body>
 		<div id=playing_zone>
-			</form>
 		</div>
 	
 	</body>

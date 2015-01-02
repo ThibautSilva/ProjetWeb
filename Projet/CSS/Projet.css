@@ -1,29 +1,85 @@
-		#connexion_zone{
-		background-color:#f3e7f5;
-		height:150px;
-		width:280px;
-		float:left-side;
-		}
-	#user {
-		height:90px;
-		width:90px;
-		float:center;
-		margin-top:5px;
-		margin-left:70;
-	}
-	body{
+	
+	@font-face {
+	font-family: "Prisma";
+	src: url('../Font/budmo_jiggler.ttf')format("truetype");
+	} 
+	
+	@font-face {
+	font-family: "Hanged_Letters";
+	src: url('../Font/Hanged_Letters.ttf')format("truetype");
+	} 
+	
+	body
+	{
+	
+	background-color:#1A1A1A;
 	font-family: Arial;
 	}
 	
-	
-	h2{
-	font-size: 40px;
+	h2
+	{
+	font-family: "Hanged_Letters";
+	font-size: 80px;
 	color: grey;
-	font-style: bold;
 	text-align: center;
 	}
 	
-	#btn_d {
+	/*ZONE*/
+	
+	#connexion_zone
+	{
+		background-color:#DFDDDF;
+		height:80px;
+		width:255px;
+		float:left;
+		
+	}
+
+	#header
+	{
+		background: url(../Images/back.png) repeat;
+		padding:2px;
+		height:40px;
+		float:left;
+		width:1330px;	
+			color:white;
+	} 
+	
+	#nav
+	{
+		background-color:white;
+		padding-top:0px;
+		height:380px;
+		float:left;
+		overflow: auto;
+		width:255px;
+	}
+	
+	#principal_zone{
+		overflow: auto;
+		background-color:#1A1A1A;
+		width:1055px;
+		height:440px;
+		padding:10px;
+		color :white;
+		float: right;	
+	}
+	
+	#playing_zone
+	{
+		background-color:#333333;
+		color:white;
+		clear:both;
+		height:70px;
+		text-align:center;
+		padding:5px; 
+		background: url(../Images/FOOT.png) repeat;
+	}
+
+	/*BOUTONS*/
+	
+	#btn_d 
+	{
 	  background: #830fa3;
 	  -webkit-border-radius: 28;
 	  -moz-border-radius: 28;
@@ -33,11 +89,13 @@
 	  padding: 10px 20px 10px 20px;
 	  text-decoration: none;
 	  border: solid #ffffff 2px;
-	  margin-left:50;
-	  margin-top:5px;
+	  border: 0 none;
+		margin-left:60px;
+		margin-top:2px;
 	}
 
-	#btn_d:hover {
+	#btn_d:hover 
+	{
 	  background: #ffffff;
 	  color:#43134a;
 	  text-decoration: none;
@@ -47,30 +105,35 @@
 	
 	
 	
-	#btn_p {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 15px;
-  background: url(Images/ajout.png) no-repeat 0px 0px #444;
-  padding: 15px 35px 10px 45px;
-  text-decoration: none;
-  border: 0 none;
-  margin-left:50;
+	#btn_p 
+	{
+	background:#1A1A1A;
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	border: 0 none;
+	margin-left:40px;
 	margin-top:5px;
-}
+	}
 
-#btn_p:hover {
-  background: #2b2d2e;
-  text-decoration: none;
-}
-	#search{
+	#btn_p:hover 
+	{
+	  background: #43134a;
+	  text-decoration: none;
+	  border: solid #1A1A1A 2px;
+	}
+	
+	/*FORME*/
+	#search
+	{
 	padding: 5px 5px 5px 5px;
-	size="40";
 	}
 	#search input[type="text"] {
-		background: url(Images/search-dark.png) no-repeat 10px 6px #444;
+		background: url(../Images/search-dark.png) no-repeat 10px 6px #444;
 		border: 0 none;
 		font: bold 12px Arial,Helvetica,Sans-serif;
 		color: #777;
@@ -82,23 +145,30 @@
 		}
 		
 	#search input[type="text"]:focus {
-    background: url(Images/search-dark.png) no-repeat 10px 6px #fcfcfc;
+    background: url(../Images/search-dark.png) no-repeat 10px 6px #fcfcfc;
+    color: #6a6f75;
+    }
+		
+	#search{
+	padding: 5px 5px 5px 5px;
+	}
+		
+	#form input[type="text"]:focus {
     color: #6a6f75;
     }
 	
-	#header{
-	background-color:#333333;
-	padding:2px;
-	height:40px;
-	float:left-side;
-	} 
+	#form input[type="text"] {
+		background-color:#444;
+		border: 0 none;
+		font: bold 12px Arial,Helvetica,Sans-serif;
+		color: #777;
+		width: 250px;
+		padding: 6px 15px 6px 35px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		}
 	
-	#nav{
-	background-color:white;
-	height:300px;
-	float:left-side;
-	overflow: auto;
-	}
 	
 td img{
   /* 
@@ -114,26 +184,20 @@ td img{
 
 ::-webkit-scrollbar {height:1em;width:1.2em;background:#6a6f75;} 
 ::-webkit-scrollbar-thumb {background:#333333;-webkit-box-shadow: 0 0 5px #888; } 
-::-webkit-scrollbar-thumb:hover {background:43134ae;}
 
-	#principal_zone{
-	overflow: auto;
 
-		background-color:#1A1A1A;
-		width:1050px;
-		height:430px;
-		padding:10px;
-		color :white;
-		float: right;	
-	}
+
 	#tracksTable
 	{
 		color:grey;
 		border-collapse:collapse
 	}
+
+/*AFFICHAGE PLAYLISTS DANS LE NAV*/	
 #menu {
   padding:0;
   margin:0;
+
   color:grey;
   list-style:none;
   text-align: center;
@@ -141,20 +205,22 @@ td img{
 }
 #menu ul {
   padding:6px;
-  margin:0;
-  size:20px;
+  margin:0;  	
+
   list-style:none;
   text-align: center;
 }
 #menu li {
-   background-color:#f3e7f5; 
-   color:grey;
+   background-color:#DFDDDF; 
+   color:#321732;
+   -webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
 }
 #menu li li {
    max-height:0;
    overflow: hidden;
    transition: all .5s;
-   size:8px;
    background: grey;
    box-shadow: none;
    border:none;
@@ -166,55 +232,32 @@ td img{
   padding: 4px;
   font-size:1.2em
 }
-#menu ul li a, #menu li:hover li a {
+#menu ul li a {
+  font-size:1em;
+  color: #333333;
+}
+
+#menu li:hover li a {
   font-size:1em;
   color: #333333;
 }
 #menu li:hover {
    background: #f3e7f5;
    color:grey;
+   border: solid #43134a 2px;
 }
 #menu li li:hover {
    background: #999;
-}
-#menu ul li:last-child {
-   border:none;
-}
-#menu li:hover li {
-  max-height: 15em;
+   border: solid #43134a 2px;
 }
 
-	td {
+#menu li:hover li {
+  max-height: 15em;
+  
+}
+
+td {
  border:1px solid #333333;
  width:20%;
  }
-	#playing_zone{
-		background-color:#333333;
-		color:white;
-		clear:both;
-		height:80px;
-		text-align:center;
-		padding:5px; 
-	}
-	
-	#search{
-	padding: 5px 5px 5px 5px;
-	size="100";
-	}
-	
-	#form input[type="text"] {
-		background-color:#444;
-		border: 0 none;
-		font: bold 12px Arial,Helvetica,Sans-serif;
-		color: #777;
-		width: 250px;
-		padding: 6px 15px 6px 35px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		}
-		
-	#search input[type="text"]:focus {
-    background: url(Images/search-dark.png) no-repeat 10px 6px #fcfcfc;
-    color: #6a6f75;
-    }
+

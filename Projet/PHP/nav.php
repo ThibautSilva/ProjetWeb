@@ -8,7 +8,7 @@
 	</body>
 	<div id=nav>
 		 <h2>Playlist</h2>
-		 <button type="button" id=btn_p onclick='document.location.href="../PHP/formular_playlist.php";' > Nouvelle </button>
+		 <button type="button" id=btn_p onclick='document.location.href="../PHP/formular_playlist.php";' > Nouvelle Playlist </button>
 		</br>
 
 		</br><ul id=menu>
@@ -18,12 +18,12 @@
 		$req  = mysql_query("SELECT * FROM playlists WHERE user_id='1'");
 		while($row = mysql_fetch_array($req))
 		{
-		echo " <ul id='niveau1'>
+		echo " <ul >
 				<li name=playlist_name> <a href='#'>". $row['playlist_name'] . " </a>
-				<ul id='niveau2'>
-					<li> <a href='#'>Lire</a> </li>
-					<li> <a href='#'>Renommer</a> </li>
-					<li> <a href='#'>Effacer</a></li>
+				<ul>
+					<li> <a href='action.php?act=lire'>Lire</a> </li>
+					<li> <a href='action.php?act=rename&name=".$row['playlist_name'] . "'>Renommer</a> </li>
+					<li> <a href='action.php?act=delete&name=".$row['playlist_name'] . "'>Effacer</a></li>
 				</ul>
 			</ul>";
 		}

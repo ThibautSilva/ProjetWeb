@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Site de Musique</title>
-	<link rel="stylesheet" type="text/css" href="Projet.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/Projet.css">
 </head>
 	</body>
 		<div id=connexion_zone>
-	
-		<img src="../Images/user.png" id=user>
+		</br>
 		<button type="button" id=btn_d>Connexion</button>
+		</br>
 	</div>
 	
 	</body>

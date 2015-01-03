@@ -10,7 +10,8 @@
 	<?php include "../PHP/header.php"?>
 	<div id=principal_zone>
 	<?php
-		require('base.php');
+
+		require('../PHP/base.php');
 		
 			$valid = true;
 			$message = "";
@@ -69,7 +70,7 @@
 		else
 		{
 			echo $message;	
-			echo '<p><a href="../HTML/Indexs.php">Retour vers la page principale.</a></p>';
+			echo '<p><a href="../HTML/indexs.php">Retour vers la page principale.</a></p>';
 		}
   ?>
   
@@ -84,7 +85,7 @@
    
   <?php
  
-require('base.php');
+require('../PHP/base.php');
    /**
    * Put the delete the plalist by using the playlist nam from the database.
    */  

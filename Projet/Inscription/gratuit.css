@@ -1,0 +1,110 @@
+﻿body{
+	background-color: #1C1C1C;
+	color: white;
+	font-size:20px;
+	}
+	
+.form-container {
+   border: 1px solid #3d3c3c;
+   background: #fafafa;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fafafa));
+   background: -webkit-linear-gradient(top, #ffffff, #fafafa);
+   background: -moz-linear-gradient(top, #ffffff, #fafafa);
+   background: -ms-linear-gradient(top, #ffffff, #fafafa);
+   background: -o-linear-gradient(top, #ffffff, #fafafa);
+   background-image: -ms-linear-gradient(top, #ffffff 0%, #fafafa 100%);
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width:300px;
+   padding:20px;
+   width:300px;
+   font-size:10px;
+   }
+.form-field {
+   border: 1px solid #a1a1a1;
+   background: #ffffff;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   color: #3B0B39;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   padding:8px;
+   margin-bottom:20px;
+   width:280px;
+   }
+.form-field:focus {
+   background: #E6E6E6;
+   color: #444147;
+   }
+.form-container h2 {
+   text-shadow: #ffffff 0 1px 0;
+   font-size:18px;
+   margin: 0 0 10px 0;
+   font-weight:bold;
+   text-align:center;
+    }
+.form-title {
+   margin-bottom:10px;
+   color: #000000;
+   text-shadow: #ffffff 0 1px 0;
+   }
+.submit-container {
+   margin:8px 0;
+   text-align:right;
+   }
+.submit-button {
+   border: 1px solid #4a4a4a;
+   background: #e9ede6;
+   background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#e9ede6));
+   background: -webkit-linear-gradient(top, #545454, #e9ede6);
+   background: -moz-linear-gradient(top, #545454, #e9ede6);
+   background: -ms-linear-gradient(top, #545454, #e9ede6);
+   background: -o-linear-gradient(top, #545454, #e9ede6);
+   background-image: -ms-linear-gradient(top, #545454 0%, #e9ede6 100%);
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #ffffff 0 1px 0;
+   color: #000000;
+   font-family: helvetica, serif;
+   padding: 8.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.submit-button:hover {
+   border: 1px solid #000000;
+   text-shadow: #cbccca 0 1px 0;
+   background: #a2a3a1;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#a2a3a1));
+   background: -webkit-linear-gradient(top, #ffffff, #a2a3a1);
+   background: -moz-linear-gradient(top, #ffffff, #a2a3a1);
+   background: -ms-linear-gradient(top, #ffffff, #a2a3a1);
+   background: -o-linear-gradient(top, #ffffff, #a2a3a1);
+   background-image: -ms-linear-gradient(top, #ffffff 0%, #a2a3a1 100%);
+   color: #5e5b5e;
+   }
+.submit-button:active {
+   text-shadow: #ffffff 0 1px 0;
+   border: 1px solid #3d3d3d;
+   background: #d1d1d1;
+   background: -webkit-gradient(linear, left top, left bottom, from(#616161), to(#a2a3a1));
+   background: -webkit-linear-gradient(top, #616161, #d1d1d1);
+   background: -moz-linear-gradient(top, #616161, #d1d1d1);
+   background: -ms-linear-gradient(top, #616161, #d1d1d1);
+   background: -o-linear-gradient(top, #616161, #d1d1d1);
+   background-image: -ms-linear-gradient(top, #616161 0%, #d1d1d1 100%);
+   color: #000000;
+   }

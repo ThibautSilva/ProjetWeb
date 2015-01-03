@@ -8,7 +8,7 @@
 	</body>
 		<div id=connexion_zone>
 		</br>
-		<button type="button" id=btn_d>Connexion</button>
+		<button type="button" href="connection.php" id=btn_d>Connexion</button>
 		</br>
 	</div>
 	

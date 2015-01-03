@@ -5,12 +5,13 @@
 	<title>Site de Musique</title>
 	<link rel="stylesheet" type="text/css" href=".../CSS/Projet.css">
 </head>
-	</body>
+	<body>
 		<div id=header>
-			<form method="get" action="/search" id=search>
+			<form method="get" action="http://localhost/projects/Projet/index.php" id="search">
+				<input type="hidden" name="a" value="search">
 				<input name="q" type="text"  placeholder="Artiste, Titre, Playlist..." />
+				<input type="submit" value="Rechercher">
 			</form>
 		</div>
-	
 	</body>
 </html>

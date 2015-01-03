@@ -8,13 +8,13 @@
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
         <title>PlayListen</title>
-<link rel="stylesheet" type="text/css" href="gratuit.css" />
+<link rel="stylesheet" type="text/css" href="Inscription/gratuit.css" />
 </head>
 
 <body>
 
 <div>
-<form class="form-container" method="post" action="connection.php"><p> 
+<form class="form-container" method="post" action="Inscription/connection.php"><p> 
 	<div class="form-title"><h2>Connexion</h2></div> 
 		<input class="form-field" name="login" required="required" type="text" placeholder="Username" />
 		<input class="form-field" name="password" required="required" type="password" placeholder="Mot de passe"/>
@@ -23,7 +23,7 @@
 <br>
 Nouveau sur PlayListen? Inscrivez-vous!
 <div id="inscription">
-<form class="form-container" method="post" action="es.php">
+<form class="form-container" method="post" action="Inscription/es.php">
 	<div class="form-title"><h2>Inscription</h2></div>
 	    
 		<input class="form-field" name="username" required="required" type="text" placeholder="Username" />

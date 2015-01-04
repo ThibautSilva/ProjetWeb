@@ -7,7 +7,7 @@
 </head>
 	<body>
 		<div id=header>
-			<form method="get" action="http://localhost/projects/Projet/index.php" id="search">
+			<form method="get" action="http://localhost/projects/Projet/PHP/index.php" id="search">
 				<input type="hidden" name="a" value="search">
 				<input name="q" type="text"  placeholder="Artiste, Titre, Playlist..." />
 				<input type="submit" value="Rechercher">

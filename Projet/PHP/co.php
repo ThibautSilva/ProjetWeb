@@ -179,6 +179,6 @@ include('../includes/haut.php'); //contient le doctype, et head.
 		</div>
 
 		<?php
-		include('../includes/bas.php');
+		include('../includes/base.php');
 		mysql_close();
 		?>

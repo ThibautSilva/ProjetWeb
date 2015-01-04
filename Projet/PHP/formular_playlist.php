@@ -13,7 +13,7 @@
 	    <h2>Nouvelle Playlist</h2>
 		    </br>Nom de la Playlist:
 			</br>
-			<form action="registration_playlist.php" method="post" id=form>
+			<form action="registration_playlist.php?user_id=<?php echo $_SESSION['user_id'] ?>" method="post" id=form>
 			<input name="playlist_name" type="text"/>
 			
 		 	<p>
@@ -21,7 +21,7 @@
 		    </p>
 			
 			<p>
-		    <input type="submit" value="Créer la playlist" />
+		    <input type="submit" value="Créer la playlist" alt="box shadow"/>
 		  </p>
 	
 		  </form>

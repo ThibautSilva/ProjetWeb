@@ -1,20 +1,49 @@
 <?php
 include_once('Controler.php') ;
-include_once('Model/Artists.php') ;
-include_once('Model/Tracks.php') ;
-include_once('Model/Playlists.php') ;
-include_once('Model/Playlists_tracks.php') ;
+include_once('../Model/Artists.php') ;
+include_once('../Model/Tracks.php') ;
+include_once('../Model/Playlists.php') ;
+include_once('../Model/Playlists_tracks.php') ;
 include_once('View.php') ;
-include_once('Model/Base.php');
+include_once('../Model/Base.php');
 
 class SiteControler extends Controler{
 
 	public function __construct() {
 		$this->actionList = array(  'search' 	=> 'searchAction',
 									'signup' 	=> 'signupAction',
+									'track' 	=> 'trackDetailAction',
+									'artist' 	=> 'artistDetailAction',
+									'playlist' 	=> 'playlistDetailAction',
 									'login'		=> 'loginAction') ;
-	}	
+	}
 
+	protected function trackDetailAction($tab)
+	{
+		if(array_key_exists('id', $tab)) {
+			$track = Tracks::findById($tab['id']) ;
+			$view = new View() ;
+			$view->affichageDetail($track) ;
+		}
+	}
+
+	protected function artistDetailAction($tab)
+	{
+		if(array_key_exists('id', $tab)) {
+			$artist = Artists::findById($tab['id']) ;
+			$view = new View() ;
+			$view->affichageArtist($artist) ;
+		}
+	}
+
+	protected function playlistDetailAction($tab)
+	{
+		if(array_key_exists('id', $tab)) {
+			$playlist = Playlists::findById($tab['id']) ;
+			$view = new View() ;
+			$view->affichagePlaylist($playlist) ;
+		}
+	}
 
 	protected function searchAction($tab)
 	{

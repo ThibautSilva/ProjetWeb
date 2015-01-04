@@ -155,15 +155,22 @@
 		$query = $c->prepare("SELECT * FROM playlists_tracks WHERE playlist_id = :playlist_id");
 		$query->bindParam(':playlist_id', $playlist_id, PDO::PARAM_INT);
 		$dbres = $query->execute();
+		$result = $query->fetchAll();
 
 		$row = $query->fetch(PDO::FETCH_ASSOC);
 
-		$playlists_tracks = new Playlists_tracks();
-		$playlists_tracks->playlist_id = $row['playlist_id'];
-        $playlists_tracks->position = $row['position'];
-        $playlists_tracks->track_id = $row['track_id'];
+		$array_result = array();
 
-		return $playlists_tracks;
+		foreach ($result as $row) {
+		    $playlists_tracks = new Playlists_tracks();
+			$playlists_tracks->playlist_id = $row['playlist_id'];
+        	$playlists_tracks->position = $row['position'];
+        	$playlists_tracks->track_id = $row['track_id'];
+
+		    $array_result[] = $playlists_tracks;
+		}
+
+		return $array_result;
 
 	    } catch (Exception $e) {
 		echo $e->getMessage();

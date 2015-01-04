@@ -1,11 +1,7 @@
 <?php
-
+require ('base.php');
 if(!empty($_POST['usernameins']) || strlen($_POST['usernameins']) < 6)
 {	
-		
-			// D'abord, je me connecte à la base de données.
-			mysql_connect("localhost", "root", "");
-			mysql_select_db("base");
 
 
 			$passe = mysql_real_escape_string(htmlspecialchars($_POST['passwordins']));

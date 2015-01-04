@@ -10,7 +10,8 @@
 	<?php include "../PHP/header.php"?>
 	<div id=principal_zone>
 	<?php
-		require('base.php');
+
+		require('../PHP/base.php');
 		
 			$valid = true;
 			$message = "";
@@ -49,6 +50,7 @@
 				if ($playlistsOK)
 				{
 					echo '<p>La Playlist '.$name.' a été renomée '.$newname.' avec succes </p>';
+					echo '<p><a href="index.php">Retour vers la page principale.</a></p>';
 				}
 			}
 			
@@ -60,6 +62,7 @@
 				if($deleteOK)
 				{
 					echo '<p>La Playlist '.$name.' a été supprimée avec succes </p>';
+					echo '<p><a href="index.php">Retour vers la page principale.</a></p>';
 				}
 				else
 				{
@@ -69,7 +72,7 @@
 		else
 		{
 			echo $message;	
-			echo '<p><a href="../HTML/Indexs.php">Retour vers la page principale.</a></p>';
+			echo '<p><a href="index.php">Retour vers la page principale.</a></p>';
 		}
   ?>
   
@@ -84,7 +87,7 @@
    
   <?php
  
-require('base.php');
+require('../PHP/base.php');
    /**
    * Put the delete the plalist by using the playlist nam from the database.
    */  

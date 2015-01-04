@@ -7,15 +7,15 @@
 </head>
 	</body>
 	<div id=nav>
-		 <h2>Playlist</h2>
-		 <button type="button" id=btn_p onclick='document.location.href="../PHP/formular_playlist.php";' > Nouvelle Playlist </button>
+		 <h1>PlayListen</h1>
+		 <button type="button" id=btn_p onclick='document.location.href="formular_playlist.php";' > Nouvelle Playlist </button>
 		</br>
 
 		</br><ul id=menu>
 		<?php
 		//AFFICHAGE DES PL DU LUTILISATEUR
-		require('../PHP/base.php');
-		$req  = mysql_query("SELECT * FROM playlists WHERE user_id='1'");
+		require('base.php');
+		$req  = mysql_query("SELECT * FROM playlists WHERE user_id='".$_SESSION['user_id']."'");
 		while($row = mysql_fetch_array($req))
 		{
 		echo " <ul >

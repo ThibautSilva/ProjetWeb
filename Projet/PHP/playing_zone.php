@@ -26,7 +26,7 @@
         function playPlaylist(choix){
             var lecteur = document.getElementById('myaudio');
             var titleHtml = document.getElementById('titre');
-            var listeTrack = document.getElementById('playlist');
+            var listeTrack = document.getElementById('playlistul');
             var position;
             if(choix == "back"){
                 position--;

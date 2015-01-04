@@ -100,14 +100,16 @@ class View {
         <body>';
 
         $res .='<div id="detailPlaylist">';
-        $res .='<p>Nom de la playlist : ' . $playlist->playlist_name . '</p></br>';
+        $res .='<p>Nom de la playlist : ' . $playlist->playlist_name . '</p><button id="playlist" onClick="playPlaylist()"><img src="../Images/play.png" width="15px"/></button></br>';
 
         $playlist_tracks = Playlists_tracks::FindById($playlist->playlist_id);
 
+        $res .= '<ul id="playlistul">';
         foreach ($playlist_tracks as $value) {
-        	$track = Tracks::FindById($value->track_id);
-        	$res .= affichageDetail($track);
+            $track = Tracks::FindById($value->track_id);
+            $res .= '<li title=\''.$track->title.'\' url=\''.$track->mp3_url.'\'><a href=http://localhost/projects/Projet/PHP/index.php?a=track&id=' . $track->track_id .'>'. $track->title . '</a></li>';
         }
+        $res .= '</ul>';
         
         echo $res;
 

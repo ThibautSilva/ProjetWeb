@@ -23,14 +23,28 @@
                 }
             }
         }
-        function playPlaylist(){
-
-        }
-        function back(){
-        	
-        }
-        function next(){
-
+        function playPlaylist(choix){
+            var lecteur = document.getElementById('myaudio');
+            var titleHtml = document.getElementById('titre');
+            var listeTrack = document.getElementById('playlist');
+            var position;
+            if(choix == "back"){
+                position--;
+            }else{ 
+                if(choix == "next"){
+                    position++;
+                }else{
+                    position = 0;
+                }
+            }
+            if(position > listeTrack.length){
+                position =0;
+            }
+            var title =listeTrack[position].getAttribute("title");
+            var url =listeTrack[position].getAttribute("url");
+            lecteur.src = url;
+            titleHtml.textContent = title;
+            lecteur.play();
         }
         function repeat(){
             var lecteur = document.getElementById('myaudio');
@@ -52,8 +66,8 @@
       HTML5 non supporté
     </audio><br />
     <button id="repeat" onClick="repeat()">Repeat</button>
-    <button id="back" onClick="back()">Back</button>
-    <button id="next" onClick="next()">Next</button>
+    <button id="back" onClick="playPlaylist('back')">Back</button>
+    <button id="next" onClick="playPlaylist('next')">Next</button>
 		</div>	
 	</body>
 </html>

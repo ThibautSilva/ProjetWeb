@@ -46,17 +46,19 @@ class View {
 			<link rel="stylesheet" type="text/css" href="CSS/Projet.css">
 		</head>
         <body>';
-
-        $res .='<div id="detailTrack">';
+        include "header.php" ;
+        $res .='<div id="principal_zone">';
         $res .='<p>Titre : ' . $track->title . '</p></br>';
         $artist = Artists::FindById($track->artist_id);
         $res .='<p>Artiste : ' . $artist->name . '</p></br>';
-        $res .='<audio controls>';
-        $res .='<source src=' . $track->mp3_url . ' type="audio/mpeg">';
-        $res .='</audio>';
-        
+        $res .='<button id="play" onClick="playAudio(\''.$track->mp3_url.'\',\''.$track->title.'\')"><img src="../Images/play.png" width="15px"/></button>';
+        $res .= '</div>
+        </body>
+        </html>';
         echo $res;
-
+        include "connexion_zone.php";
+        include "nav.php";
+        include "playing_zone.php";
         return $res;
 
     }
@@ -124,7 +126,7 @@ class View {
 
         $res .= '<p>Liste des Tracks :</p>';
         foreach ($tracks as $value) {
-            $res .= '<a href=http://localhost/projects/Projet/PHP/index.php?a=track&id=' . $value->track_id .'>'. $value->title . '</a><br/>';
+            $res .= '<button id="play" onClick="playAudio(\''.$value->mp3_url.'\',\''.$value->title.'\')"><img src="../Images/play.png" width="15px"/></button><a href=http://localhost/projects/Projet/PHP/index.php?a=track&id=' . $value->track_id .'>'. $value->title . '</a><br/>';
         }
 		
         $res .= '<p>Liste des Artistes :</p>';

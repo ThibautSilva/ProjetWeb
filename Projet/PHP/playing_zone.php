@@ -32,6 +32,17 @@
         function next(){
 
         }
+        function repeat(){
+            var lecteur = document.getElementById('myaudio');
+            var buttonrep = document.getElementById('repeat');
+            if (lecteur.loop == false){
+                lecteur.loop = true;
+                buttonrep.textContent = "No repeat";
+            }else{
+                lecteur.loop = false;
+                buttonrep.textContent = "Repeat";
+            }
+        }
     </script>
   </head>
   
@@ -40,6 +51,7 @@
     <audio id="myaudio" controls>
       HTML5 non supporté
     </audio><br />
+    <button id="repeat" onClick="repeat()">Repeat</button>
     <button id="back" onClick="back()">Back</button>
     <button id="next" onClick="next()">Next</button>
 		</div>	

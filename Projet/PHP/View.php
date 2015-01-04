@@ -25,7 +25,7 @@ class View {
         $res = '<div>';
         foreach ($this->listTracks as $value) {
             $res .= '<h2>Liste des Tracks :</h2>';
-            $res .= $value->title . "<br/>";
+            $res .= '<button id="play" onClick="playAudio(\''.$value->mp3_url.'\',\''.$value->title.'\')"><img src="../Images/play.png" width="15px"/></button><a href=http://localhost/projects/Projet/PHP/index.php?a=track&id=' . $value->track_id .'>'. $value->title . '</a><br/>';
         }
         $res .= '</div>';
 

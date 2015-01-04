@@ -73,14 +73,19 @@ class View {
 			<link rel="stylesheet" type="text/css" href="CSS/Projet.css">
 		</head>
         <body>';
-
-        $res .='<div id="detailArtist">';
-        $res .='<p>Nom : ' . $artist->name . '</p></br>';
-        $res .='<p>Info : ' . $artist->info . '</p></br>';
-        $res .='<img src="' . $artist->image_url . '">';
+		include "header.php";
+        $res .='<div id=principal_zone>';
+        $res .='<h2>' . $artist->name . '</h2></br>';
+		$res .='<img src="' . $artist->image_url . ' "id= image>';
+        $res .='<h2>Info : </h2>' . $artist->info . '</br>
+		        </div>
+			</body>
+		</html>';
         
         echo $res;
-
+		include "connexion_zone.php";
+		include "nav.php";
+		include "playing_zone.php";
     }
 
     public function affichagePlaylist($playlist)
@@ -136,7 +141,7 @@ class View {
 
         $res .= '<p>Liste des Playlistes :</p>';
         foreach ($playlists as $value) {
-            $res .= '<a href=http://localhost/projects/Projet/PHP/index.php?a=playlist&id=' . $value->playlist_id .'>'. $value->playlist_name . '</a><br/>';
+            $res .= '<a href=http://localhost/projects/Projet/PHP/playlist.php?playlist_id='.$value->playlist_id.'</a><br/>';
         }
         $res .= '</div>
 		</body>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Site de Musique</title>
+	<title>Playlisten</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/Projet.css">
 </head>
 	</body>

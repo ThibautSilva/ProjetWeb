@@ -43,6 +43,7 @@
 			if ($playlistsOK)
 			{
 				echo '<p>La Playlist '.$playlist_name.' a été ajoutée avec succes </p>';
+				echo '<p><a href="index.php">Retour vers la page principale</a></p>';
 			}
 		}
 

@@ -15,13 +15,12 @@
 		<?php
 		//AFFICHAGE DES PL DU LUTILISATEUR
 		require('base.php');
-		$req  = mysql_query("SELECT * FROM playlists WHERE user_id='".$_SESSION['user_id']."'");
+		$req  = mysql_query("SELECT * FROM playlists WHERE user_id='1'");
 		while($row = mysql_fetch_array($req))
 		{
 		echo " <ul >
-				<li name=playlist_name> <a href='#'>". $row['playlist_name'] . " </a>
+				<li name=playlist_name> <a href='playlist.php?name=".$row['playlist_name']."&playlist_id=". $row['playlist_id'] . "'>". $row['playlist_name'] . " </a>
 				<ul>
-					<li> <a href='action.php?act=lire'>Lire</a> </li>
 					<li> <a href='rename.php?name=".$row['playlist_name'] . "'>Renommer</a> </li>
 					<li> <a href='action.php?act=delete&name=".$row['playlist_name'] . "'>Effacer</a></li>
 				</ul>
